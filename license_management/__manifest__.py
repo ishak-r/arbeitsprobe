@@ -1,0 +1,25 @@
+{
+    'name': 'License Management',
+    'version': '1.0',
+    'summary': 'Manage software licenses for customers',
+    'description': 'Module to manage software licenses and their lifecycle.',
+    'author': 'AXMI GmbH',
+    'website': 'https://www.axmi.de',
+    'category': 'Sales',
+    'depends': ['product', 'contacts', 'mail'],
+    'data': [
+        'security/license_security.xml',
+        'security/ir.model.access.csv',
+        'data/software_license_sequence.xml',
+        'data/email_template.xml',
+        'data/license_cron.xml',
+        'views/software_license_views.xml',
+        'views/product_template_views.xml',
+        'views/res_partner_views.xml',
+        'wizard/software_license_renew_wizard_views.xml',
+        'views/menu.xml',
+    ],
+
+    'installable': True,
+    'application': True,
+}

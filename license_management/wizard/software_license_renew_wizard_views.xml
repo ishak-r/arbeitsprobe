@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    
+    <record id="view_software_license_renew_wizard_form" model="ir.ui.view">
+        <field name="name">software.license.renew.wizard.form</field>
+        <field name="model">software.license.renew.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Renew Software License">
+                <group>
+                    <field name="duration_months"/>
+                </group>
+                <footer>
+                    <button string="Renew" type="object" name="renew_license" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_software_license_renew_wizard" model="ir.actions.act_window">
+        <field name="name">Renew Software License</field>
+        <field name="res_model">software.license.renew.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+</odoo>

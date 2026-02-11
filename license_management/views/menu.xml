@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Main Menu -->
+        <menuitem 
+            id="main_menu_license_management" 
+            name="License Management" 
+            sequence="10" 
+        />
+
+        <!-- Licenses Submenu -->
+        <menuitem 
+            id="menu_software_license" 
+            name="Licenses" 
+            parent="main_menu_license_management" 
+            sequence="10"
+        />
+
+        <menuitem 
+            id="menu_software_license_all" 
+            name="All Licenses" 
+            parent="menu_software_license" 
+            action="action_software_license_management" 
+            sequence="10"
+        />
+
+        <menuitem 
+            id="menu_license_products" 
+            name="Products" 
+            parent="main_menu_license_management" 
+            sequence="20" 
+            groups="group_license_manager"
+        />
+
+        <menuitem 
+            id="menu_license_products_all" 
+            name="Products" 
+            parent="menu_license_products" 
+            action="product.product_template_action" 
+            sequence="10"
+        />
+
+    </data>
+</odoo>

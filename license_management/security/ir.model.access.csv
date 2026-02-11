@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_license_user,software.license.user,model_software_license,group_license_user,1,1,1,0
+access_license_manager,license.manager,model_software_license,group_license_manager,1,1,1,1
+access_license_wizard_renew_user,software.license.wizard.renew.user,model_software_license_renew_wizard,group_license_user,1,1,1,1
