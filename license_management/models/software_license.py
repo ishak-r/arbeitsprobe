@@ -189,15 +189,6 @@ class SoftwareLicense(models.Model):
             'context': {'default_license_id': self.id}
         }
 
-        # """Renew license for another period"""
-        # for record in self:
-        #     new_start = record.expiration_date + timedelta(days=1)
-        #     new_expiration = new_start + timedelta(days=record.duration_months * 30)
-        #     record.write({
-        #         'expiration_date': new_expiration,
-        #         'state': 'active'
-        #     })
-
     def action_draft(self):
         """Reset license to draft state"""
         self.write({'state': 'draft'})
